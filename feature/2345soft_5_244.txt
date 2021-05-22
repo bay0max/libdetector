@@ -1,0 +1,4 @@
+D:\workplace\2345apps\2345soft_5_244\smali\com:276,2,0,0,65,0,94,0,3,1599,1
+D:\workplace\2345apps\2345soft_5_244\smali\com\hexin:276,2,0,0,65,0,94,0,3,1599,2
+D:\workplace\2345apps\2345soft_5_244\smali\com\hexin\plat:276,2,0,0,65,0,94,0,3,1599,3
+D:\workplace\2345apps\2345soft_5_244\smali\com\hexin\plat\android:276,2,0,0,65,0,94,0,3,1599,4

@@ -1,0 +1,16 @@
+D:\workplace\2345apps\2345soft_3_155\smali\com:459,45,3,0,25,0,100,0,34,4767,1
+D:\workplace\2345apps\2345soft_3_155\smali\com\tencent:459,45,3,0,25,0,100,0,34,4767,2
+D:\workplace\2345apps\2345soft_3_155\smali\com\tencent\bugly:406,45,3,0,22,0,80,0,31,3970,3
+D:\workplace\2345apps\2345soft_3_155\smali\com\tencent\StubShell:53,0,0,0,3,0,20,0,3,797,3
+D:\workplace\2345apps\2345soft_3_155\smali\com\tencent\bugly\legu:406,45,3,0,22,0,80,0,31,3970,4
+D:\workplace\2345apps\2345soft_3_155\smali\com\tencent\bugly\legu\crashreport:119,9,0,0,7,0,47,0,0,2085,5
+D:\workplace\2345apps\2345soft_3_155\smali\com\tencent\bugly\legu\proguard:287,36,3,0,10,0,31,0,31,1824,5
+D:\workplace\2345apps\2345soft_3_155\smali\com\tencent\bugly\legu\crashreport\biz:0,0,0,0,2,0,11,0,0,155,6
+D:\workplace\2345apps\2345soft_3_155\smali\com\tencent\bugly\legu\crashreport\common:6,0,0,0,2,0,12,0,0,330,6
+D:\workplace\2345apps\2345soft_3_155\smali\com\tencent\bugly\legu\crashreport\crash:113,2,0,0,3,0,24,0,0,1447,6
+D:\workplace\2345apps\2345soft_3_155\smali\com\tencent\bugly\legu\crashreport\inner:0,0,0,0,0,0,0,0,0,17,6
+D:\workplace\2345apps\2345soft_3_155\smali\com\tencent\bugly\legu\crashreport\common\info:6,0,0,0,2,0,12,0,0,238,7
+D:\workplace\2345apps\2345soft_3_155\smali\com\tencent\bugly\legu\crashreport\common\strategy:0,0,0,0,0,0,0,0,0,92,7
+D:\workplace\2345apps\2345soft_3_155\smali\com\tencent\bugly\legu\crashreport\crash\anr:55,0,0,0,3,0,4,0,0,202,7
+D:\workplace\2345apps\2345soft_3_155\smali\com\tencent\bugly\legu\crashreport\crash\h5:0,1,0,0,0,0,0,0,0,131,7
+D:\workplace\2345apps\2345soft_3_155\smali\com\tencent\bugly\legu\crashreport\crash\jni:33,0,0,0,0,0,2,0,0,301,7

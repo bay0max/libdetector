@@ -1,0 +1,10 @@
+D:\workplace\2345apps\2345soft_5_236\smali\com:344,1,0,0,6,0,8,0,0,1682,1
+D:\workplace\2345apps\2345soft_5_236\smali\com\mifeng:3,0,0,0,0,0,2,0,0,12,2
+D:\workplace\2345apps\2345soft_5_236\smali\com\tencent:0,0,0,0,0,0,0,0,0,1,2
+D:\workplace\2345apps\2345soft_5_236\smali\com\wrapper:341,1,0,0,6,0,6,0,0,1669,2
+D:\workplace\2345apps\2345soft_5_236\smali\com\mifeng\ui:3,0,0,0,0,0,2,0,0,12,3
+D:\workplace\2345apps\2345soft_5_236\smali\com\tencent\StubShell:0,0,0,0,0,0,0,0,0,1,3
+D:\workplace\2345apps\2345soft_5_236\smali\com\wrapper\proxyapplication:341,1,0,0,6,0,6,0,0,1669,3
+D:\workplace\2345apps\2345soft_5_236\smali_classes2\com:0,0,0,0,0,0,0,0,0,9,1
+D:\workplace\2345apps\2345soft_5_236\smali_classes2\com\example:0,0,0,0,0,0,0,0,0,9,2
+D:\workplace\2345apps\2345soft_5_236\smali_classes2\com\example\helloworld:0,0,0,0,0,0,0,0,0,9,3

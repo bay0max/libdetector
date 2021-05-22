@@ -1,0 +1,5 @@
+D:\workplace\2345apps\2345soft_5_284\smali\s:36,0,0,0,17,0,4,0,0,122,1
+D:\workplace\2345apps\2345soft_5_284\smali\s\h:36,0,0,0,17,0,4,0,0,122,2
+D:\workplace\2345apps\2345soft_5_284\smali\s\h\e:36,0,0,0,17,0,4,0,0,122,3
+D:\workplace\2345apps\2345soft_5_284\smali\s\h\e\l:36,0,0,0,17,0,4,0,0,122,4
+D:\workplace\2345apps\2345soft_5_284\smali\s\h\e\l\l:36,0,0,0,17,0,4,0,0,122,5

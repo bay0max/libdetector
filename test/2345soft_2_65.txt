@@ -1,0 +1,7 @@
+D:\workplace\2345apps\2345soft_2_65\smali\a:0,0,0,0,0,0,0,0,0,5,1
+D:\workplace\2345apps\2345soft_2_65\smali\com:123,0,0,0,29,0,42,0,0,484,1
+D:\workplace\2345apps\2345soft_2_65\smali\a\auu:0,0,0,0,0,0,0,0,0,5,2
+D:\workplace\2345apps\2345soft_2_65\smali\com\netease:123,0,0,0,29,0,42,0,0,484,2
+D:\workplace\2345apps\2345soft_2_65\smali\com\netease\nis:123,0,0,0,29,0,42,0,0,484,3
+D:\workplace\2345apps\2345soft_2_65\smali\com\netease\nis\wrapper:123,0,0,0,29,0,42,0,0,484,4
+D:\workplace\2345apps\2345soft_2_65\smali\com\netease\nis\wrapper\plugin:33,0,0,0,4,0,16,0,0,109,5
