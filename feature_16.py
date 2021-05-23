@@ -6,23 +6,23 @@ workplace=os.getcwd()
 
 #apk解压，返回解压目录
 def Decompile(apkpath:str):
-    apkname=apkpath.split("\\")[-1]
+    apkname=apkpath.split("/")[-1]
     print("decompile apk named ",apkname)
     apkdir=apkpath.replace(apkname,"")
     os.chdir(apkdir)
     
     if not os.path.exists(apkpath.replace('.apk','')):  
-        os.system('java -jar '+workplace+'\\apktool.jar d -r --no-assets '+apkpath)
+        os.system('java -jar '+workplace+'/apktool.jar d -r --no-assets '+apkpath)
     return apkpath.replace('.apk','')
 # Decompile("D:\workplace\main\\testapks\BuptRoom.apk")
 
 def GetDirFeature(dirname:str,categorybasis:dict,decompilepath:str,preapiextract:dict):
-    vector=[0]*11
+    vector=[0]*16
     
     for root,dirnames,filenames in os.walk(dirname):
         for filename in filenames:
             if filename.endswith(".smali"):
-                filepath=root+"\\"+filename
+                filepath=root+"/"+filename
                 tmp=preapiextract[filepath]
                 for i in range(0,15):
                     vector[i]+=tmp[i]
@@ -32,7 +32,7 @@ def GetDirFloor(dirname:str,decompilepath:str):
 
     if decompilepath in dirname:
         tmp=dirname.replace(decompilepath,"")
-        f=tmp.count("\\")
+        f=tmp.count("/")
         if f<=1:
             return 0
         else:
@@ -50,10 +50,7 @@ def ApiExtractor(smalifile:str,categorybasis:dict):
     #初始化list=[0]*10 对应10类api、总API数目、api种类数 层数
     #查询列表进行API计数
     #两个特殊的类android.manifest类属于security；而android.R属于UI
-    Apicnt={"io":0,"net":0,"device":0,"location":0,"UI":0,"hardware":0,"app":0,"multimedia":0,"security":0,"databse":0,"util":0,"system":0,"xml":0,"time":0,"datatype":0,"floor":0}
-    """
-    io\net\device\location\UI\hardware\app\multimedia\security\database\util\system\xml\time\datatype
-    """     
+    Apicnt={"io":0,"net":0,"device":0,"location":0,"UI":0,"hardware":0,"app":0,"multimedia":0,"security":0,"database":0,"util":0,"system":0,"xml":0,"time":0,"datatype":0,"floor":0}
     if os.path.exists(smalifile):
         with open(smalifile,"r",encoding="utf-8") as f:
             # print("smalifile=",smalifile)
@@ -99,7 +96,7 @@ def GetCategory(classname:str,categorybasis:dict):
 
 def GetApiList():
     ApiList=[]
-    with open(workplace+"\APIlist.txt","r") as f:
+    with open(workplace+"/APIlist.txt","r") as f:
         for line in f.readlines():
             line=line.strip()
             if line:
@@ -109,9 +106,6 @@ def GetCategoryBasis():
     #依据category.txt文件进行分类
     #返回一个分类字典作为依据，其中有两个特例
     #两个特殊的类android.manifest类属于security；而android.R属于UI
-    """
-    io\net\device\location\UI\hardware\app\multimedia\security\database\util\system\xml\time\datatype
-    """
     categorybasis={
          "io":[]\
         ,"net":[]\
@@ -130,7 +124,7 @@ def GetCategoryBasis():
         ,"datatype":[]
         } 
     
-    with open(workplace+"\categorybasis_16.txt","r") as f:
+    with open(workplace+"/categorybasis_16.txt","r") as f:
         for line in f.readlines(): 
             line=line.strip()
             if line and ":" in line:
@@ -156,7 +150,7 @@ def FeatureGeneration(apkpath:str):
     #traverse the folder of decompiled apk
     #store all feature vector into "feature.txt" in the form "dirname:vector "
     categorybasis=GetCategoryBasis()
-    apkname=apkpath.split("\\")[-1]
+    apkname=apkpath.split("/")[-1]
     decompilepath=Decompile(apkpath)#改变了工作路径
     ignorelist=["assets","original","res"]
     #进行预处理，计算所有smali文件的特征并记录在字典中
@@ -164,14 +158,14 @@ def FeatureGeneration(apkpath:str):
     for root,dirnames,filenames in os.walk(decompilepath):
         for filename in filenames:
             if filename.endswith(".smali"):
-                filepath=root+"\\"+filename
+                filepath=root+"/"+filename
                 preapiextract[filepath]=ApiExtractor(filepath,categorybasis)
 
-    with open(workplace+"\\feature\\"+apkname.replace(".apk","")+".txt","w") as f:
+    with open(workplace+"/featureubuntu/"+apkname.replace(".apk","")+".txt","w") as f:
         for root,dirnames,filenames in os.walk(decompilepath):
             for dirname in dirnames:
                 if dirname not in ignorelist:
-                    abpath=root+"\\"+dirname
+                    abpath=root+"/"+dirname
                     vector=GetDirFeature(abpath,categorybasis,decompilepath,preapiextract)
                     if IsVectorValid(vector):
                         line=abpath+":"
@@ -187,18 +181,22 @@ def FeatureGeneration(apkpath:str):
         filedel_flag=1
     if not os.path.exists(decompilepath) and filedel_flag==1:
         print(decompilepath+'文件夹删除')
-# if __name__=="__main__":
-#     #apkdir="D:\\workplace\\main\\testapks"
-#     apkdir="D:\\workplace\\2345apps"
-#     for rname,dnames,fnames in os.walk(apkdir):   
-#         for fname in tqdm(fnames):
-#             if fname.endswith('.apk'):
-#                 apkpath=rname+"\\"+fname
-#                 FeatureGeneration(apkpath)
+if __name__=="__main__":
+    #apkdir="D:\\workplace\\main\\testapks"
+    apkdir="/home/hao/hao/crawler/2345apk"
+    for rname,dnames,fnames in os.walk(apkdir):   
+        for fname in tqdm(fnames):
+            if fname.endswith('.apk'):
+                apkpath=rname+"/"+fname
+                num=fname.split("_")[2].split(".")[0]
+                page=fname.split("_")[1]
+                if int(num)<=100 and int(page)==1:
+                    print(num)
+                    FeatureGeneration(apkpath)
+                else:
+                    continue
 
-
-
-apilist=GetApiList()
+#apilist=GetApiList()
 
 
 

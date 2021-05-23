@@ -1,0 +1,6 @@
+/home/hao/hao/crawler/2345apk/2345soft_1_31/smali/com:75,0,0,0,19,0,14,0,0,0,9,7,0,0,228,1
+/home/hao/hao/crawler/2345apk/2345soft_1_31/smali/com/qihoo:30,0,0,0,14,0,3,0,0,0,7,4,0,0,73,2
+/home/hao/hao/crawler/2345apk/2345soft_1_31/smali/com/qihoo360:0,0,0,0,0,0,0,0,0,0,0,2,0,0,4,2
+/home/hao/hao/crawler/2345apk/2345soft_1_31/smali/com/stub:45,0,0,0,5,0,11,0,0,0,2,1,0,0,151,2
+/home/hao/hao/crawler/2345apk/2345soft_1_31/smali/com/qihoo/util:30,0,0,0,14,0,3,0,0,0,7,4,0,0,73,3
+/home/hao/hao/crawler/2345apk/2345soft_1_31/smali/com/qihoo360/replugin:0,0,0,0,0,0,0,0,0,0,0,2,0,0,4,3

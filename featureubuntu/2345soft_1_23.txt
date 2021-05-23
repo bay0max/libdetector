@@ -1,0 +1,4 @@
+/home/hao/hao/crawler/2345apk/2345soft_1_23/smali/com:47,0,0,0,14,0,9,0,0,0,2,3,0,0,136,1
+/home/hao/hao/crawler/2345apk/2345soft_1_23/smali/com/qihoo:43,0,0,0,9,0,6,0,0,0,0,2,0,0,36,2
+/home/hao/hao/crawler/2345apk/2345soft_1_23/smali/com/stub:4,0,0,0,5,0,3,0,0,0,2,1,0,0,100,2
+/home/hao/hao/crawler/2345apk/2345soft_1_23/smali/com/qihoo/util:43,0,0,0,9,0,6,0,0,0,0,2,0,0,36,3
